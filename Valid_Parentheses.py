@@ -8,11 +8,21 @@ Every close bracket has a corresponding open bracket of the same type.
 Return true if s is a valid string, and false otherwise."""
 
 
-def main(self, s: str):
+def main(s: str):
 
-    while '()' in s or '{}' in s or '[]' in s:
-        s = s.replace('()', '')
-        s = s.replace('{}', '')
-        s = s.replace('[]', '')
+    salida: str = ""
 
-    return s == ''
+    for letter in s:
+        if letter in "[{()}]":
+            salida += letter
+
+    while '()' in salida or '{}' in salida or '[]' in salida:
+        salida = salida.replace('()', '')
+        salida = salida.replace('{}', '')
+        salida = salida.replace('[]', '')
+
+    return salida == ''
+
+# print (main("dasfdasf"))
+# print (main("das{fdas}f"))
+# print (main("das{fd]as}f"))
