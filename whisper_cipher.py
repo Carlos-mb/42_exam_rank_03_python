@@ -1,4 +1,4 @@
-"""Generates an encryption of a string by adding n to its ASCII"""
+"""Generates an encryption of a string by adding n to its alphabet position"""
 
 
 def whisper_cipher(s: str, n: int):

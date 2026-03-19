@@ -18,10 +18,6 @@ Input: s = "tab a cat"
 Output: false
 Explanation: "tabacat" is not a palindrome.
 
-Constraints:
-
-1 <= s.length <= 1000
-s is made up of only printable ASCII characters.
 """
 
 
