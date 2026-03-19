@@ -16,4 +16,3 @@ def main(self, s: str):
         s = s.replace('[]', '')
 
     return s == ''
-

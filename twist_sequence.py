@@ -1,6 +1,16 @@
 """Rotate a list of numbers n positions to right"""
 
-def twist_sequence (l1: list[int], n: int):
+# Pro version
+def twist_sequence(l1: list[int], n: int) -> list[int]:
+    if not l1:
+        return []
+
+    n = n % len(l1)
+    return l1[-n:] + l1[:-n]
+
+# 42 student version :)
+
+def twist_sequence2 (l1: list[int], n: int):
 
     if len(l1) <= 1 or n == 0:
         return l1

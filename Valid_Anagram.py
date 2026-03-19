@@ -13,24 +13,10 @@ Input: s = "jar", t = "jam"
 
 Output: false
 """
-class Solution:
-    def isValid(self, s: str) -> bool:
-        par = 0
-        ll = 0
-        cor = 0
-        for l in s:
-            if l == "(":
-               par += 1
-            elif l == ")":
-                par -= 1
-            elif l == "{":
-                ll += 1
-            elif l == "}":
-                ll -= 1
-            elif l == "[":
-                cor += 1
-            elif l == "]":
-                cor -= 1
-            if par * ll * cor < 0:
-                return False
-        return True
+
+
+def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+
+    return sorted(s) == sorted(t)
